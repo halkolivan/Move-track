@@ -125,17 +125,16 @@ export default function DetailsFilm() {
             </NavLink>
             <button onClick={openActorWindow}>{t("fullList")}</button>
             {isOpenWinActor && (
-              <div className="overlay">
+              <div
+                className="overlay"
+                style={{ zIndex: isOpenWinActor ? 99 : 0 }}
+              >
                 <div className="actors-more">
                   <div className="actors-more-title">
                     <h2>Актёры</h2>
                     <button onClick={closeActorWindow}>+</button>
                   </div>
                   <div className="actors-more-count">
-                    <div>Данные актёра</div>
-                    <div>Данные актёра</div>
-                    <div>Данные актёра</div>
-                    <div>Данные актёра</div>
                     <div>Данные актёра</div>
                     <div>Данные актёра</div>
                     <div>Данные актёра</div>
@@ -185,9 +184,8 @@ export default function DetailsFilm() {
                         <div>
                           <div className="rank"></div>
                         </div>
-                        <div>
-                          <div className="rank"></div>
-                        </div>
+                      </div>
+                      <div className="similar-box-carts-column">
                         <div>
                           <div className="rank"></div>
                         </div>
@@ -202,43 +200,8 @@ export default function DetailsFilm() {
                         <div>
                           <div className="rank"></div>
                         </div>
-                        <div>
-                          <div className="rank"></div>
-                        </div>
-                        <div>
-                          <div className="rank"></div>
-                        </div>
-                        <div>
-                          <div className="rank"></div>
-                        </div>
                       </div>
                       <div className="similar-box-carts-column">
-                        <div>
-                          <div className="rank"></div>
-                        </div>
-                        <div>
-                          <div className="rank"></div>
-                        </div>
-                        <div>
-                          <div className="rank"></div>
-                        </div>
-                        <div>
-                          <div className="rank"></div>
-                        </div>
-                        <div>
-                          <div className="rank"></div>
-                        </div>
-                      </div>
-                      <div className="similar-box-carts-column">
-                        <div>
-                          <div className="rank"></div>
-                        </div>
-                        <div>
-                          <div className="rank"></div>
-                        </div>
-                        <div>
-                          <div className="rank"></div>
-                        </div>
                         <div>
                           <div className="rank"></div>
                         </div>
