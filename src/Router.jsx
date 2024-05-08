@@ -1,47 +1,46 @@
 //Import components
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Template from "./Template";
-import i18n from "./i18n";
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Template from './Template'
+import './i18n'
 
 //Import pages
-import Home from "./pages/Home";
-import Error from "./pages/Error";
-import WarningLists from "./components/WarningLists";
-import DetailsFilm from "./components/DetailsFilm";
-import CartActor from "./components/CartActor";
+import Home from './pages/Home'
+import Error from './pages/Error'
+import WarningLists from './components/WarningLists'
+import DetailsFilm from './components/DetailsFilm'
+import CartActor from './components/CartActor'
 
 export default function Router() {
   const routing = createBrowserRouter([
     {
-      path: "/",
+      path: '/',
       element: <Template />,
       children: [
         {
-          path: "/",
+          path: '/',
           element: <Home />,
         },
         {
-          path: "/warningLists",
+          path: '/warningLists',
           element: <WarningLists />,
         },
 
         {
-          path: "/detailsFilm",
+          path: '/detailsFilm',
           element: <DetailsFilm />,
         },
-        
 
         {
-          path: "/cartActor",
+          path: '/cartActor',
           element: <CartActor />,
         },
         {
-          path: "*",
+          path: '*',
           element: <Error />,
         },
       ],
     },
-  ]);
+  ])
 
-  return <RouterProvider router={routing} />;
+  return <RouterProvider router={routing} />
 }
